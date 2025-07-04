@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. CAPPELLI - Dizionario di Abbreviature Latine ed Italiane</title>
+    <meta name="description" content="Digital version of Adriano Cappelli's Dictionary of Latin and Italian Abbreviations (1912) with interactive Gruvbox theme">
+    <meta name="keywords" content="Cappelli, dictionary, Latin, abbreviations, paleography, medieval, manuscripts">
+    <meta name="author" content="Valentin Sentis">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="A. CAPPELLI - Dizionario di Abbreviature">
+    <meta property="og:description" content="Interactive digital version of Cappelli's Dictionary of Latin and Italian Abbreviations">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A. CAPPELLI - Dizionario di Abbreviature">
+    <meta name="twitter:description" content="Interactive digital version of Cappelli's Dictionary of Latin and Italian Abbreviations">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#282828" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fbf1c7" media="(prefers-color-scheme: light)">
+    
+    <!-- CSS: Load generated Tailwind CSS -->
+    <link rel="stylesheet" href="./src/styles/output.css">
+    
+    <!-- Preload critical JavaScript -->
+    <link rel="modulepreload" href="./src/main-tailwind.ts">
+    
+    <style>
+        /* Critical CSS for immediate rendering */
+        html {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Loading spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(254, 128, 25, 0.3);
+            border-radius: 50%;
+            border-top-color: #fe8019;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Hide content until loaded */
+        .loading-hidden {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .loading-visible {
+            opacity: 1;
+        }
+        
+        /* Prevent FOUC (Flash of Unstyled Content) */
+        .no-js {
+            display: none;
+        }
+    </style>
+</head>
+<body class="loading-hidden">
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="fixed inset-0 bg-gruvbox-bg-hard dark:bg-gruvbox-light-bg-hard flex items-center justify-center z-50">
+        <div class="text-center">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-gruvbox-orange dark:text-gruvbox-light-orange font-mono text-sm">
+                Loading Cappelli Dictionary...
+            </p>
+        </div>
+    </div>
+    
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-gruvbox-orange text-gruvbox-bg-hard px-4 py-2 rounded-gruvbox font-semibold z-50">
+        Skip to main content
+    </a>
+    
+    <!-- Main content will be inserted here by TypeScript -->
+    <main id="main-content" class="no-js">
+        <noscript>
+            <div class="min-h-screen bg-gruvbox-bg-hard text-gruvbox-fg1 flex items-center justify-center p-8">
+                <div class="text-center max-w-md">
+                    <h1 class="text-2xl font-mono font-bold text-gruvbox-orange mb-4">
+                        JavaScript Required
+                    </h1>
+                    <p class="text-gruvbox-fg2 mb-4">
+                        This interactive version of the Cappelli Dictionary requires JavaScript to function properly.
+                    </p>
+                    <p class="text-gruvbox-fg3 text-sm">
+                        Please enable JavaScript in your browser settings to access the full dictionary experience.
+                    </p>
+                </div>
+            </div>
+        </noscript>
+    </main>
+    
+    <!-- JavaScript -->
+    <script type="module">
+        // Remove no-js class immediately
+        document.querySelector('.no-js')?.classList.remove('no-js');
+        
+        // Show content and hide loading indicator when fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.classList.remove('loading-hidden');
+                document.body.classList.add('loading-visible');
+                
+                const loadingIndicator = document.getElementById('loading-indicator');
+                if (loadingIndicator) {
+                    loadingIndicator.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingIndicator.remove();
+                    }, 300);
+                }
+            }, 100);
+        });
+        
+        // Service Worker registration for PWA capabilities (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    <script type="module" src="./src/main-tailwind.ts"></script>
+    
+    <!-- Analytics (optional - replace with your tracking code) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</body>
+</html>
