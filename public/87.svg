@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="42.000000pt"
+   height="34.000000pt"
+   viewBox="0 0 42.000000 34.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg8"
+   sodipodi:docname="87.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient46566">
+      <stop
+         style="stop-color:#999999;stop-opacity:1;"
+         offset="0"
+         id="stop46562" />
+      <stop
+         style="stop-color:#999999;stop-opacity:0;"
+         offset="1"
+         id="stop46564" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient46566"
+       id="linearGradient46568"
+       x1="-2.1031761"
+       y1="17.3428"
+       x2="46.878098"
+       y2="17.3428"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient46566"
+       id="linearGradient46806"
+       gradientUnits="userSpaceOnUse"
+       x1="-2.1031761"
+       y1="17.3428"
+       x2="46.878098"
+       y2="17.3428"
+       gradientTransform="matrix(0.79486239,0,0,0.86715393,2.4651082,0.95504287)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="9.2205882"
+     inkscape:cx="59.486443"
+     inkscape:cy="29.553429"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <g
+     id="g46478"
+     transform="translate(-0.61346867,-0.77093508)"
+     style="fill:url(#linearGradient46568);fill-opacity:1"
+     inkscape:export-filename="/home/val/Applications/cap.png"
+     inkscape:export-xdpi="1016.5816"
+     inkscape:export-ydpi="1016.5816">
+    <ellipse
+       id="path43326"
+       cx="20.260063"
+       cy="15.993921"
+       rx="19.466688"
+       ry="19.972818"
+       style="fill:url(#linearGradient46806);fill-opacity:1;stroke-width:0.622666" />
+  </g>
+  <g
+     transform="matrix(0.1,0,0,-0.1,-2.7720191,31.416314)"
+     fill="#000000"
+     stroke="none"
+     id="g6"
+     inkscape:export-filename="/home/val/Applications/cap.png"
+     inkscape:export-xdpi="1016.5816"
+     inkscape:export-ydpi="1016.5816">
+    <path
+       d="m 343,271 c -19,-31 -77,-36 -129,-10 -30,14 -49,18 -55,12 -14,-14 -14,-151 -1,-183 9,-20 11,-9 11,58 l 1,82 h 69 c 84,0 131,15 131,41 0,24 -12,24 -27,0 z"
+       id="path2" />
+    <path
+       d="M 91,225 C 73,198 67,175 66,129 65,74 68,66 93,44 c 31,-26 49,-29 94,-14 29,11 63,55 63,84 0,28 -15,17 -28,-18 -15,-40 -42,-53 -71,-34 -40,25 -56,133 -25,176 11,17 12,22 2,22 -7,0 -24,-16 -37,-35 z"
+       id="path4" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.01525px;line-height:1.25;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold Italic';stroke-width:0.94036"
+     x="15.781956"
+     y="14.736458"
+     id="text24788"
+     transform="matrix(0.99197336,-0.01469227,0.01446043,1.0078774,0,0)"
+     inkscape:export-filename="/home/val/Applications/cap.png"
+     inkscape:export-xdpi="1016.5816"
+     inkscape:export-ydpi="1016.5816"><tspan
+       sodipodi:role="line"
+       id="tspan24786"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.01525px;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold Italic';stroke-width:0.94036"
+       x="15.781956"
+       y="14.736458">appelli</tspan></text>
+</svg>

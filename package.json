@@ -1,0 +1,35 @@
+{
+  "name": "cappelli",
+  "version": "1.0.0",
+  "description": "A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "build-css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "keywords": [
+    "cappelli",
+    "dictionary",
+    "latin",
+    "abbreviations",
+    "paleography"
+  ],
+  "author": "Valentin Sentis",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.8",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.30.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  },
+  "dependencies": {}
+}
