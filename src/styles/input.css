@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@font-face {
+  font-family: 'Hamlet-Tertia';
+  src: url('/Hamlet-Tertia18.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom Gruvbox components */
+@layer components {
+  /* Theme-aware background utilities */
+  .bg-gruvbox-primary {
+    @apply bg-gruvbox-bg dark:bg-gruvbox-light-bg;
+  }
+  
+  .bg-gruvbox-secondary {
+    @apply bg-gruvbox-bg-soft dark:bg-gruvbox-light-bg-soft;
+  }
+  
+  .bg-gruvbox-tertiary {
+    @apply bg-gruvbox-bg1 dark:bg-gruvbox-light-bg1;
+  }
+  
+  /* Theme-aware text utilities */
+  .text-gruvbox-primary {
+    @apply text-gruvbox-fg1 dark:text-gruvbox-light-fg1;
+  }
+  
+  .text-gruvbox-secondary {
+    @apply text-gruvbox-fg2 dark:text-gruvbox-light-fg2;
+  }
+  
+  .text-gruvbox-muted {
+    @apply text-gruvbox-fg3 dark:text-gruvbox-light-fg3;
+  }
+  
+  /* Theme-aware border utilities */
+  .border-gruvbox-primary {
+    @apply border-gruvbox-bg2 dark:border-gruvbox-light-bg2;
+  }
+  
+  .border-gruvbox-secondary {
+    @apply border-gruvbox-bg3 dark:border-gruvbox-light-bg3;
+  }
+  
+  /* Gruvbox button component */
+  .btn-gruvbox {
+    @apply px-2 py-2 font-hamlet font-semibold text-xs
+           bg-gradient-to-br from-gruvbox-bg1 to-gruvbox-bg-soft
+           dark:from-gruvbox-light-bg1 dark:to-gruvbox-light-bg-soft
+           text-gruvbox-fg2 dark:text-gruvbox-light-fg2
+           border border-gruvbox-bg2 dark:border-gruvbox-light-bg2
+           rounded-gruvbox
+           shadow-gruvbox dark:shadow-gruvbox-light
+           transition-all duration-300 ease-out
+           hover:scale-105 hover:-translate-y-1
+           hover:bg-gradient-to-br hover:from-gruvbox-yellow-dim hover:to-gruvbox-yellow
+           dark:hover:from-gruvbox-light-yellow-dim dark:hover:to-gruvbox-light-yellow
+           hover:text-gruvbox-bg-hard dark:hover:text-gruvbox-light-bg-hard
+           hover:border-gruvbox-yellow dark:hover:border-gruvbox-light-yellow
+           hover:shadow-gruvbox-lg dark:hover:shadow-gruvbox-light-lg
+           active:scale-100 active:translate-y-0
+           focus:outline-none focus:ring-2 focus:ring-gruvbox-orange dark:focus:ring-gruvbox-light-orange
+           relative overflow-visible
+           text-center
+           leading-tight;
+  }
+  
+  /* Gruvbox info button variant */
+  .btn-gruvbox-info {
+    @apply btn-gruvbox;
+  }
+  
+  /* Gruvbox hover button variant */
+  .btn-gruvbox-hover {
+    @apply btn-gruvbox;
+  }
+  
+  /* Theme toggle button in header */
+  .btn-theme-toggle-header {
+    @apply px-1 py-0.5 rounded text-xs font-hamlet
+           bg-gradient-to-br from-gruvbox-bg1 to-gruvbox-bg-soft
+           dark:from-gruvbox-light-bg1 dark:to-gruvbox-light-bg-soft
+           border border-gruvbox-bg3 dark:border-gruvbox-light-bg3
+           text-gruvbox-orange dark:text-gruvbox-light-orange
+           shadow-sm
+           transition-all duration-200 ease-out
+           hover:scale-105
+           hover:border-gruvbox-orange dark:hover:border-gruvbox-light-orange
+           active:scale-100
+           focus:outline-none focus:ring-1 focus:ring-gruvbox-orange dark:focus:ring-gruvbox-light-orange
+           flex items-center justify-center
+           flex-shrink-0
+           whitespace-nowrap;
+  }
+  
+  /* Gruvbox table component */
+  .table-gruvbox {
+    @apply bg-gradient-to-br from-gruvbox-bg-hard to-gruvbox-bg
+           dark:from-gruvbox-light-bg-hard dark:to-gruvbox-light-bg
+           rounded-gruvbox-lg p-6
+           shadow-gruvbox-xl dark:shadow-gruvbox-light-xl
+           backdrop-blur-sm
+           transition-all duration-300;
+  }
+  
+  .table-gruvbox td {
+    @apply bg-gradient-to-br from-gruvbox-bg to-gruvbox-bg-soft
+           dark:from-gruvbox-light-bg dark:to-gruvbox-light-bg-soft
+           border border-gruvbox-bg2 dark:border-gruvbox-light-bg2
+           rounded-gruvbox p-2
+           shadow-gruvbox dark:shadow-gruvbox-light
+           transition-all duration-300 ease-out
+           hover:border-gruvbox-yellow dark:hover:border-gruvbox-light-yellow
+           w-auto;
+  }
+  
+  .table-gruvbox th {
+    @apply text-gruvbox-orange dark:text-gruvbox-light-orange
+           font-hamlet font-bold text-lg text-center
+           mb-2
+           relative;
+  }
+  
+  /* Gruvbox header box */
+  .header-gruvbox {
+    @apply bg-gradient-to-br from-gruvbox-bg to-gruvbox-bg-soft
+           dark:from-gruvbox-light-bg dark:to-gruvbox-light-bg-soft
+           border border-gruvbox-bg3 dark:border-gruvbox-light-bg3
+           rounded-gruvbox-lg mx-4 my-3 px-4 py-3
+           shadow-gruvbox-xl dark:shadow-gruvbox-light-xl
+           relative overflow-hidden
+           transition-all duration-300;
+  }
+  
+  .title-gruvbox {
+    @apply font-hamlet font-extrabold text-3xl text-center
+           bg-gradient-to-r from-gruvbox-orange to-gruvbox-yellow
+           dark:from-gruvbox-light-orange dark:to-gruvbox-light-yellow
+           bg-clip-text text-transparent
+           tracking-wide
+           drop-shadow-lg;
+  }
+  
+  /* Shimmer effect */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full
+           bg-gradient-to-r from-transparent via-white/10 to-transparent
+           -translate-x-full animate-shimmer;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow-gruvbox {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .backdrop-blur-gruvbox {
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Scrollbar styling */
+  .scrollbar-gruvbox::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+  
+  .scrollbar-gruvbox::-webkit-scrollbar-track {
+    @apply bg-gruvbox-bg-hard dark:bg-gruvbox-light-bg-hard rounded-gruvbox;
+  }
+  
+  .scrollbar-gruvbox::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-gruvbox-gray to-gruvbox-bg3 
+           dark:from-gruvbox-light-gray dark:to-gruvbox-light-bg3
+           rounded-gruvbox border-2 border-gruvbox-bg-hard dark:border-gruvbox-light-bg-hard;
+  }
+  
+  .scrollbar-gruvbox::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-gruvbox-orange to-gruvbox-yellow
+           dark:from-gruvbox-light-orange dark:to-gruvbox-light-yellow;
+  }
+}
