@@ -1,6 +1,7 @@
 {
   "name": "cappelli",
   "version": "1.0.0",
+  "type": "module",
   "description": "A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912",
   "main": "dist/index.js",
   "scripts": {
